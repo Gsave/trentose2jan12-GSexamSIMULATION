@@ -3,7 +3,7 @@ const area = require('./area');
 
 const areaRoutes = express.Router(); 
 
-squaresRoutes.route('/')
+areaRoutes.route('/')
 .get(function (req, res) {
     var sides = [req.param.side1,req.param.side2]
     var result = area.gerArea(sides)
@@ -16,4 +16,4 @@ squaresRoutes.route('/')
     } 
 })
 
-module.exports = squaresRoutes;
+module.exports = areaRoutes;
