@@ -8,19 +8,19 @@ test('getArea([3,3]) should return 9', () => {
 });
 
 test('getArea([not_int,int]) should return -1', () => {
-    var prova = [a,1]
+    var prova = ['a',1]
     const response = area.getArea(prova);
     expect(response).toBe(-1)
 });
 
 test('getArea(int,not_int]) should return -1', () => {
-    var prova = [1,a]
+    var prova = [1,'a']
     const response = area.getArea(prova);
     expect(response).toBe(-1)
 });
 
 test('getArea([not_int,not_int]) should return -1', () => {
-    var prova = [a,a]
+    var prova = ['a','a']
     const response = area.getArea(prova);
     expect(response).toBe(-1)
 });
