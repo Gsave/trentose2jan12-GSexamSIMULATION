@@ -6,7 +6,7 @@ const areaRoutes = express.Router();
 areaRoutes.route('/')
 .get(function (req, res) {
     var sides = [req.query.side1,req.query.side2]
-    var result = area.gerArea(sides)
+    var result = area.getArea(sides)
     if(result == -1){
         res.status(400)
         res.json({result:result})
