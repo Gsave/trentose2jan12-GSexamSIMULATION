@@ -1,6 +1,15 @@
 class Area{
+
+    static isNumeric(n){
+        if ((typeof n) == "number") {
+            return true
+        }else{
+            return false
+        }
+    }
+
     static isInt(n){
-        if (is_numeric(n) && (n%1 ==0)) {
+        if (this.isNumeric(n) && (n%1 ==0)) {
             return true
         }else{
             return false
@@ -9,7 +18,7 @@ class Area{
 
     static getArea(sides){
         var ris 
-        if( isInt(sides[0]) && sides[0]>0 && isInt(sides[1]) && sides[1]>0){
+        if(this.isInt(sides[0]) && sides[0]>0 && this.isInt(sides[1]) && sides[1]>0){
             ris = sides[0]*sides[1]
         }else{
             ris = -1
